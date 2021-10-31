@@ -3,10 +3,11 @@ import { AddCategory } from './components/AddCategory';
 import { GifGrid } from './components/GifGrid';
 import './index.css';
 
-export const GitExpertApp = () => {
+export const GifExpertApp = ({ defaultCategories = [] } ) => {
     //const categories = ['One Punch', 'Samurai X', 'Dragon Ball'];
     //const [categories, setCategories] = useState(['One Punch', 'Samurai X', 'Dragon Ball'])
-    const [categories, setCategories] = useState(['One Punch']);
+    //const [categories, setCategories] = useState(['One Punch']);
+    const [categories, setCategories] = useState( defaultCategories );
     // const handleAdd = () =>{
     //     //Para agregar al final
     //     //setCategories( [ ...categories, 'HunterXHunter' ] ); 
@@ -20,7 +21,7 @@ export const GitExpertApp = () => {
     //console.log (categories);
     return (
         <>
-           <h2> GitExpertApp </h2>
+           <h2> GifExpertApp </h2>
            <AddCategory setCategories = { setCategories }/>
            <hr />
 
